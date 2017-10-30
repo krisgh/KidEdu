@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pictures>
+	<picture>
+		<englishname>Crocodile</englishname>
+		<chinesename>鳄鱼</chinesename>
+		<path>imgs/croc-small.png</path>
+	</picture>
+	<picture>
+		<englishname>Tree</englishname>
+		<chinesename>树</chinesename>
+		<path>imgs/树.png</path>
+	</picture>
+	<picture>
+		<englishname>Panda</englishname>
+		<chinesename>熊猫</chinesename>
+		<path>imgs/熊猫秘书.png</path>
+	</picture>
+	<picture>
+		<englishname>Flower</englishname>
+		<chinesename>花</chinesename>
+		<path>imgs/花.png</path>
+	</picture>
+	<picture>
+		<englishname>Apple</englishname>
+		<chinesename>苹果</chinesename>
+		<path>imgs/苹果-Apple.png</path>
+	</picture>
+	<picture>
+		<englishname>Bird</englishname>
+		<chinesename>小鸟</chinesename>
+		<path>imgs/鸟.png</path>
+	</picture>
+	<picture>
+		<englishname>Ostrich</englishname>
+		<chinesename>鸵鸟</chinesename>
+		<path>imgs/鸵鸟.png</path>
+	</picture>
+</pictures>

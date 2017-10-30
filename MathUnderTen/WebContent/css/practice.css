@@ -1,0 +1,97 @@
+@CHARSET "UTF-8";
+
+.m-btn {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.m-card {
+	margin: 50px auto;
+	background-color: #fff;
+	color: darkblue;
+	margin: 10px;
+}
+
+.m-card h1 {
+	font-size: 200px;
+	line-height: 200px;
+	text-align: center;
+	padding: 10px;
+}
+
+.m-card img {
+	padding: 10%;
+}
+
+.m-card-case-content {
+	position: relative;
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px
+		rgba(0, 0, 0, 0.1) inset;
+	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px
+		rgba(0, 0, 0, 0.1) inset;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1)
+		inset;
+	-o-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1)
+		inset;
+}
+
+.m-card-case-content:before, .m-card-case-content:after {
+	z-index: -1;
+	content: "";
+	background-color: #foo;
+	position: absolute;
+	top: 50%;
+	bottom: 0;
+	left: 10px;
+	right: 10px;
+	-webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+	-moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+	-o-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+	border-radius: 100px/10px;
+}
+
+.m-card-in {
+	padding: 30px;
+}
+
+.m-finish {
+	text-align:center;
+}
+#mj-div-result{
+	visibility:hidden;
+}
+
+#proload-00 {
+	background: url(../imgs/0.png) no-repeat -9999px -9999px;
+}
+#proload-01 {
+	background: url(../imgs/1.png) no-repeat -9999px -9999px;
+}
+#proload-02 {
+	background: url(../imgs/2.png) no-repeat -9999px -9999px;
+}
+#proload-03 {
+	background: url(../imgs/3.png) no-repeat -9999px -9999px;
+}
+#proload-04 {
+	background: url(../imgs/4.png) no-repeat -9999px -9999px;
+}
+#proload-05 {
+	background: url(../imgs/5.png) no-repeat -9999px -9999px;
+}
+#proload-06 {
+	background: url(../imgs/6.png) no-repeat -9999px -9999px;
+}
+#proload-07 {
+	background: url(../imgs/7.png) no-repeat -9999px -9999px;
+}
+#proload-08 {
+	background: url(../imgs/8.png) no-repeat -9999px -9999px;
+}
+#proload-09 {
+	background: url(../imgs/9.png) no-repeat -9999px -9999px;
+}
+#proload-10 {
+	background: url(../imgs/10.png) no-repeat -9999px -9999px;
+}
