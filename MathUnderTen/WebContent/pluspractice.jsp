@@ -174,7 +174,7 @@
 				</div>
 			</div>
 			<div class="am-modal-bd">
-				<h1>${formula.one }+${formula.two }=${formula.result }</h1>
+				<h1>${formula.one }${formula.operation }${formula.two }=${formula.result }</h1>
 			</div>
 			<ul class="am-nav am-nav-pills am-nav-justify">
 				<li><a href="FormulaAction">下一题</a></li>

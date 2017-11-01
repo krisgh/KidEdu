@@ -4,7 +4,8 @@ public class FormulaElement {
 	private int one =0;
 	private int two=0;
 	private int result=0;
-	private String operation="";
+	private String operation=""; // symbol for display
+	private String operate="add";
 	
 	public String getOperation() {
 		return operation;
@@ -18,8 +19,6 @@ public class FormulaElement {
 	public void setResult(int result) {
 		this.result = result;
 	}
-	private String operate="add";
-	
 	public int getOne() {
 		return one;
 	}

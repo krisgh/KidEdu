@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.time.LocalTime;
 import com.edu.math.entity.*;
 import com.edu.math.utility.*;
 
@@ -20,6 +21,7 @@ public class FormulaAction extends HttpServlet {
 	private String pic="";
 	private HttpServletRequest req=null;
 	private HttpServletResponse resp=null;
+	private String mode = "";
 
 	/**
 	 * @see HttpServlet#HttpServlet()
@@ -41,8 +43,7 @@ public class FormulaAction extends HttpServlet {
 		response.setCharacterEncoding("utf-8");
 		this.req=request;
 		this.resp=response;
-
-		String mode = "";
+		
 		mode = request.getParameter("select-mode");
 		if (mode == null) {
 			mode = "next";
@@ -58,10 +59,15 @@ public class FormulaAction extends HttpServlet {
 			pic="imgs/croc-small.png";
 		}
 		
-
 		switch (mode) {
 		case "add":
 			addAction();
+			break;
+		case "sub":
+			subAction();
+			break;
+		case "aas":
+			aasAction();
 			break;
 		case "next":
 			nextAction();
@@ -89,22 +95,68 @@ public class FormulaAction extends HttpServlet {
 		return;
 	}
 	
+	private void subFormula() {
+		FormulaElement fe = new GenerateFormula().subFormula();
+		if (fe != null) {
+			req.setAttribute("formula", fe);
+		}
+		return;
+	}
+	
+	private void assFormula(){
+		int s = LocalTime.now().getSecond();
+		if(s%2==0){
+			this.addFormula();
+		}
+		else{
+			this.subFormula();
+		}
+		return;
+	}
+	
 	private void addAction(){
 		times = 10;
 		this.addFormula();
 		initAttrib();
 	}
+	
+	private void subAction(){
+		times=10;
+		this.subFormula();
+		initAttrib();
+	}
+	
+	private void aasAction(){
+		times=10;
+		this.assFormula();
+		initAttrib();
+	}
+	
+	
+	
 	private void nextAction(){
 		times = (Integer) req.getSession().getAttribute("times");
+		mode=(String)req.getSession().getAttribute("mode");
+		
 		if (times > 0) {
-			addFormula();
+			if("add".equals(mode)){
+				addFormula();
+			}
+			if("sub".equals(mode)){
+				subFormula();
+			}
+			if("aas".equals(mode)){
+				assFormula();
+			}
 			times--;
 			req.getSession().setAttribute("times", times);
 		}
 	}
+	
 	private void initAttrib(){
 		req.getSession().setAttribute("times", times);
 		req.getSession().setAttribute("name", name);
 		req.getSession().setAttribute("picture",pic);
+		req.getSession().setAttribute("mode", mode);
 	}
 }

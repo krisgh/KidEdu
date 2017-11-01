@@ -56,6 +56,8 @@
 				value="add" name="select-mode" checked> 十以内加法
 			</label> <label class="am-radio-inline"> <input type="radio"
 				value="sub" name="select-mode"> 十以内减法
+			</label> <label class="am-radio-inline"> <input type="radio"
+				value="aas" name="select-mode"> 十以内加减混合
 			</label>
 		</div>
 		<!-- 图片选择器 -->
@@ -63,13 +65,16 @@
 		<x:parse xml="${picsInfo}" var="output"></x:parse>
 
 		<div class="picker">
-			<select class="image-picker show-labels" name="like-pic" style="visibility: hidden">
+			<select class="image-picker show-labels" name="like-pic"
+				style="visibility: hidden">
 				<x:forEach select="$output/pictures/picture" var="pic">
 					<x:set var="cn" select="$pic/chinesename" />
 					<x:set var="pp" select="$pic/path" />
 					<x:set var="en" select="$pic/englishname" />
-					<option data-img-src="<x:out select='$pp' />" value="<x:out select='$pp' />"><x:out
-							select='$cn' /><x:out select='$en' /></option>
+					<option data-img-src="<x:out select='$pp' />"
+						value="<x:out select='$pp' />">
+						<x:out select='$cn' /><x:out select='$en' />
+					</option>
 				</x:forEach>
 			</select>
 		</div>
