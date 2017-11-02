@@ -5,7 +5,7 @@ public class FormulaElement {
 	private int two=0;
 	private int result=0;
 	private String operation=""; // symbol for display
-	private String operate="add";
+	private String operate=""; //plus or sub
 	
 	public String getOperation() {
 		return operation;

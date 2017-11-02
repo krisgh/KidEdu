@@ -101,11 +101,17 @@
 			<!-- 辅助图片区开始 -->
 			<div class="am-u-sm-4">
 				<ul class="am-avg-sm-4 boxes">
-					<c:if test="${formula.one==0}">
+					<c:if test="${formula.operate=='sub' }">
+						<c:set var="firstNum" value="${formula.result }"></c:set>
+					</c:if>
+					<c:if test="${formula.operate=='plus' }">
+						<c:set var="firstNum" value="${formula.one }"></c:set>
+					</c:if>
+					<c:if test="${firstNum==0}">
 						<li class="box m-button"><img src="imgs/blank.png"
 							class="am-img-responsive" /></li>
 					</c:if>
-					<c:forEach begin="1" end="${formula.one }" varStatus="loop">
+					<c:forEach begin="1" end="${firstNum }" varStatus="loop">
 						<li class="box m-button"><img src="${picture }"
 							class="am-img-responsive" /></li>
 					</c:forEach>
@@ -113,10 +119,19 @@
 			</div>
 			<div class="am-u-sm-4">
 				<ul class="am-avg-sm-4 boxes">
-					<c:forEach begin="1" end="${formula.two }" varStatus="loop">
-						<li class="box m-button"><img src="${picture }"
-							class="am-img-responsive" /></li>
-					</c:forEach>
+					<c:if test="${formula.operate=='sub' }">
+						<c:forEach begin="1" end="${formula.two }" varStatus="loop">
+							<li class="box m-button"><img src="${picture }"
+								class="am-img-responsive" style="opacity:0.4"/></li>
+						</c:forEach>
+					</c:if>
+					<c:if test="${formula.operate=='plus' }">
+						<c:forEach begin="1" end="${formula.two }" varStatus="loop">
+							<li class="box m-button"><img src="${picture }"
+								class="am-img-responsive" /></li>
+						</c:forEach>
+					</c:if>
+
 				</ul>
 			</div>
 			<!-- 按钮区域 -->
