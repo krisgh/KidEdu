@@ -35,4 +35,9 @@
 		<chinesename>鸵鸟</chinesename>
 		<path>imgs/鸵鸟.png</path>
 	</picture>
+	<picture>
+		<englishname>Dinosaur</englishname>
+		<chinesename>恐龙</chinesename>
+		<path>imgs/恐龙.png</path>
+	</picture>
 </pictures>

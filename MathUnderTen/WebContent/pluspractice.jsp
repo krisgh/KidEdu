@@ -131,7 +131,6 @@
 								class="am-img-responsive" /></li>
 						</c:forEach>
 					</c:if>
-
 				</ul>
 			</div>
 			<!-- 按钮区域 -->
